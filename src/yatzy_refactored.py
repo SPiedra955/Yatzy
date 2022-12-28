@@ -8,7 +8,6 @@ class Yatzy:
         return score
     
     @staticmethod
-    
     def yatzy(*rolls_dice):     
         for number in rolls_dice:
             if number != rolls_dice[0]: 
@@ -94,14 +93,16 @@ class Yatzy:
             return sum(rolls_dice)
     
     @staticmethod
-    def full_house(*rolls_dice):
+    def full_house(*rolls_dice): 
+        
         score = 0
         pairFound = 0
-        threeFound = 0
+        threeFound = 0     
+        
         for number in range(7):
             if rolls_dice.count(number) == 3:
                 score += number * 3
-                threeFound += 1
+                threeFound = 1
             elif rolls_dice.count(number) == 2:
                 score += number * 2
                 pairFound += 1
