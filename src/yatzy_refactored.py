@@ -1,3 +1,5 @@
+from src.enumerateDices import Pips
+
 class Yatzy:
     
     @staticmethod
@@ -15,28 +17,34 @@ class Yatzy:
         return 50       
     
     @staticmethod
-    def ones(*rolls_dice):
-        return rolls_dice.count(1)*1
+    def  ones(*rolls_dice):
+        ONE = Pips.ONE.values()
+        return rolls_dice.count(ONE) * ONE
     
     @staticmethod
     def twos(*rolls_dice):
-        return rolls_dice.count(2)*2
+        TWO = Pips.TWO.values()
+        return rolls_dice.count(TWO) * TWO
     
     @staticmethod
     def threes(*rolls_dice):
-        return rolls_dice.count(3)*3
+        THREE = Pips.THREE.values()
+        return rolls_dice.count(THREE) * THREE
     
     @staticmethod
     def fours(*rolls_dice):
-        return rolls_dice.count(4)*4
+        FOUR = Pips.FOUR.values()
+        return rolls_dice.count(FOUR) * FOUR
     
     @staticmethod
     def fives(*rolls_dice):
-        return rolls_dice.count(5)*5
+        FIVE = Pips.FIVE.values()
+        return rolls_dice.count(FIVE) * FIVE
     
     @staticmethod
     def sixes(*rolls_dice):
-        return rolls_dice.count(6)*6
+        SIX = Pips.SIX.values()
+        return rolls_dice.count(SIX) * SIX
     
     @staticmethod
     def score_pair(*rolls_dice):
