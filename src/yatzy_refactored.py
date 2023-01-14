@@ -18,33 +18,28 @@ class Yatzy:
     
     @staticmethod
     def  ones(*rolls_dice):
-        ONE = Pips.ONE.values()
-        return rolls_dice.count(ONE) * ONE
+        return rolls_dice.count(1) * 1
     
     @staticmethod
     def twos(*rolls_dice):
-        TWO = Pips.TWO.values()
-        return rolls_dice.count(TWO) * TWO
+        return rolls_dice.count(2) * 2
     
     @staticmethod
     def threes(*rolls_dice):
-        THREE = Pips.THREE.values()
-        return rolls_dice.count(THREE) * THREE
+        return rolls_dice.count(3) * 3
     
     @staticmethod
     def fours(*rolls_dice):
-        FOUR = Pips.FOUR.values()
-        return rolls_dice.count(FOUR) * FOUR
+        return rolls_dice.count(4) * 4
     
     @staticmethod
     def fives(*rolls_dice):
-        FIVE = Pips.FIVE.values()
-        return rolls_dice.count(FIVE) * FIVE
+        return rolls_dice.count(5) * 5
     
     @staticmethod
     def sixes(*rolls_dice):
         SIX = Pips.SIX.values()
-        return rolls_dice.count(SIX) * SIX
+        return rolls_dice.count(6) * 6
     
     @staticmethod
     def score_pair(*rolls_dice):
