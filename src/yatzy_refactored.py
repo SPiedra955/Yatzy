@@ -1,5 +1,3 @@
-from src.enumerateDices import Pips
-
 class Yatzy:
     
     @staticmethod
@@ -38,7 +36,6 @@ class Yatzy:
     
     @staticmethod
     def sixes(*rolls_dice):
-        SIX = Pips.SIX.values()
         return rolls_dice.count(6) * 6
     
     @staticmethod
@@ -47,7 +44,6 @@ class Yatzy:
         for number in rolls_dice:
             if rolls_dice.count(number) >= pair:
                 return pair * number
-        else:
             return 0
     
     @staticmethod
@@ -60,16 +56,14 @@ class Yatzy:
             if rolls_dice.count(number) >= 2:
                 score += number * 2
                 pairsFound += 1
-        else:
-            return 0
-    
+        return 0
+ 
     @staticmethod
     def three_of_a_kind(*rolls_dice):
         for number in rolls_dice:
             if rolls_dice.count(number) >= 3:
                 return number * 3
-        else:
-            return 0
+        return 0
 
     @staticmethod
     def four_of_a_kind(*rolls_dice):
@@ -96,7 +90,7 @@ class Yatzy:
             return sum(rolls_dice)
     
     @staticmethod
-    def full_house(*rolls_dice): 
+    def full_house(*rolls_dice):
         
         score = 0
         pairFound = 0

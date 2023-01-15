@@ -1,4 +1,4 @@
-from src.yatzy_refactored import Yatzy
+from src.yatzyEnums import Yatzy
 import pytest
 
 @pytest.mark.chance
@@ -61,11 +61,11 @@ def test_pair_of_dices():
     assert 12 == Yatzy.score_pair(6,4,4,1,6)
 
 @pytest.mark.double_pair
-def test_double_pairs():
-    assert 0 == Yatzy.score_double_pair(1,1,2,3,4)
-    assert 6 == Yatzy.score_double_pair(1,1,2,2,2)
-    assert 8 == Yatzy.score_double_pair(3,3,2,1,1)
-    
+def test_double_pair():
+    assert 0 == Yatzy.score_double_pair(1, 1, 2, 3, 4)
+    assert 6 == Yatzy.score_double_pair(1, 1, 2, 2, 2)
+    assert 8 == Yatzy.score_double_pair(3, 3, 2, 1, 1)
+
 @pytest.mark.three_of_a_kind
 def test_three_of_a_kind():
     assert 0 == Yatzy.three_of_a_kind(1,2,2,1,5)
