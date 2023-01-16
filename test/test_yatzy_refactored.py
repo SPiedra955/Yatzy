@@ -1,4 +1,5 @@
 from src.yatzy_refactored import Yatzy
+from src.yatzyEnums import Yatzy
 import pytest
 
 @pytest.mark.chance
